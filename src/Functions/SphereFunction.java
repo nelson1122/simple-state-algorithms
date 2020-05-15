@@ -1,6 +1,6 @@
 package Functions;
 
-import Solution.Solution;
+import Algorithms.Solution;
 
 public class SphereFunction extends Function {
 

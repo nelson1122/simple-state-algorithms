@@ -1,8 +1,7 @@
 package Functions;
 
-import Solution.Solution;
+import Algorithms.Solution;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Function {
