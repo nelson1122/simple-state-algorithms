@@ -4,8 +4,8 @@ import Algorithms.Solution;
 
 public class Ackley extends Function {
 
-    public Ackley(Integer upperLimit, Integer lowerLimit, Integer dimensionsNumber) {
-        super(upperLimit, lowerLimit, dimensionsNumber);
+    public Ackley() {
+        this.name = "Ackley";
     }
 
     @Override
@@ -21,8 +21,8 @@ public class Ackley extends Function {
             double y = 0;
 
             for (int i = 0; i < dimVector.length; i++) {
-                x += Math.pow(i, 2);
-                y += Math.cos(c * i);
+                x += Math.pow(dimVector[i], 2);
+                y += Math.cos(c * dimVector[i]);
             }
             fitness = -a * Math.exp(-b * Math.sqrt(x / dimVector.length)) - Math.exp(y / dimVector.length) + a + Math.exp(1);
         }

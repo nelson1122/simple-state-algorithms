@@ -1,18 +1,22 @@
 package Functions;
 
 import Algorithms.Solution;
+import Tests.TabuSearchTest;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+import static Tests.Parameters.LOWER_LIMIT;
+import static Tests.Parameters.UPPER_LIMIT;
+
 public abstract class Function {
+    public String name;
     public Integer upperLimit;
     public Integer lowerLimit;
     public Integer dimensionsNumber;
 
-    public Function(Integer upperLimit, Integer lowerLimit, Integer dimensionsNumber) {
-        this.upperLimit = upperLimit;
-        this.lowerLimit = lowerLimit;
-        this.dimensionsNumber = dimensionsNumber;
+    public Function() {
+        this.upperLimit = UPPER_LIMIT;
+        this.lowerLimit = LOWER_LIMIT;
     }
 
     public Solution getCandidate() {

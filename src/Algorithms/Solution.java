@@ -1,5 +1,7 @@
 package Algorithms;
 
+import java.util.Arrays;
+
 public class Solution {
     public Double[] dimensionsVector;
     public Double quality;
@@ -17,7 +19,7 @@ public class Solution {
     @Override
     public String toString() {
         return
-//                "array= " + Arrays.toString(this.dimensionsVector) + "\n" +
+                "array= " + Arrays.toString(this.dimensionsVector) + "\n" +
                 "quality= " + this.quality;
     }
 

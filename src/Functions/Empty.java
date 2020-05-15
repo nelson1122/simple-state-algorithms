@@ -1,4 +1,10 @@
 package Functions;
 
-public class Empty {
+import Algorithms.Solution;
+
+public class Empty extends Function {
+    @Override
+    public Solution process(Solution solution) {
+        return null;
+    }
 }

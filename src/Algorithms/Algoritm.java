@@ -2,15 +2,15 @@ package Algorithms;
 
 import Functions.Function;
 
+import static Tests.Parameters.OFE_MAX_NUMBER;
+
 public abstract class Algoritm {
     protected Integer ofeMaxNumber;
-    protected Double radio;
     protected Function function;
     public Solution best;
 
-    public Algoritm(Integer ofeMaxNumber, Double radio, Function function) {
-        this.ofeMaxNumber = ofeMaxNumber;
-        this.radio = radio;
+    public Algoritm(Function function) {
+        this.ofeMaxNumber = OFE_MAX_NUMBER;
         this.function = function;
     }
 

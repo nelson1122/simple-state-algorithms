@@ -6,12 +6,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TabuSearch extends Algoritm {
+    private Double radio;
     private Integer l;
     private Integer n;
 
-
-    public TabuSearch(Integer ofeMaxNumber, Double radio, Function function, Integer l, Integer n) {
-        super(ofeMaxNumber, radio, function);
+    public TabuSearch(Function function, Double radio, Integer l, Integer n) {
+        super(function);
+        this.radio = radio;
         this.l = l;
         this.n = n;
     }
@@ -57,7 +58,7 @@ public class TabuSearch extends Algoritm {
             }
             ofe += 2;
 
-//            System.out.println("Iteration [" + foe + "]");
+//            System.out.println("Iteration [" + ofe + "]");
 //            System.out.println(S);
         }
     }
