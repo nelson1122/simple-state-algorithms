@@ -2,9 +2,9 @@ package Functions;
 
 import Algorithms.Solution;
 
-public class SphereFunction extends Function {
+public class Sphere extends Function {
 
-    public SphereFunction(Integer upperLimit, Integer lowerLimit, Integer dimensionsNumber) {
+    public Sphere(Integer upperLimit, Integer lowerLimit, Integer dimensionsNumber) {
         super(upperLimit, lowerLimit, dimensionsNumber);
     }
 

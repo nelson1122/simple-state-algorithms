@@ -2,7 +2,7 @@ package Tests;
 
 import Algorithms.Solution;
 import Algorithms.TabuSearch;
-import Functions.SphereFunction;
+import Functions.Sphere;
 import com.opencsv.CSVWriter;
 
 import java.io.FileWriter;
@@ -36,10 +36,10 @@ public class Test {
 
                         List<Solution> solutionsByTests = new ArrayList<>();
                         for (int i = 0; i < TESTS_NUMBER; i++) {
-                            SphereFunction sphereFunction =
-                                    new SphereFunction(UPPER_LIMIT, LOWER_LIMIT, dimensions);
+                            Sphere sphere =
+                                    new Sphere(UPPER_LIMIT, LOWER_LIMIT, dimensions);
                             TabuSearch tabuSearch =
-                                    new TabuSearch(OFE_MAX_NUMBER, tweakRadio, sphereFunction, tabuListSize, neighborsNumber);
+                                    new TabuSearch(OFE_MAX_NUMBER, tweakRadio, sphere, tabuListSize, neighborsNumber);
                             tabuSearch.execute();
                             solutionsByTests.add(tabuSearch.best);
                         }
@@ -63,7 +63,7 @@ public class Test {
 
     }
 
-    public void write2Csv(Object... data) {
+    private void write2Csv(Object... data) {
         try {
             FileWriter fileWriter = new FileWriter("resources/data.csv", true);
             CSVWriter writer = new CSVWriter(fileWriter);
